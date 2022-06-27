@@ -1,0 +1,32 @@
+﻿@model Schema17.Models.Newsletter
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Newsletter</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewsLetterName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewsLetterName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="LetterId" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger mx-1 px-4" />
+        <a asp-action="Index"  class="btn btn-primary px-4">Back to List</a>
+    </form>
+</div>

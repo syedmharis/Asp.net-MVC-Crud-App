@@ -1,0 +1,30 @@
+﻿@model Schema17.Models.Newsletter
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Newsletter Info</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewsLetterName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewsLetterName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+    </dl>
+</div>
+<div  class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.LetterId" class="btn btn-outline-danger px-4">Edit</a> 
+    <a asp-action="Index" class="btn btn-primary px-4" >Back to List</a>
+</div>

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 fw-bold">Schema17</h1>
+</div>
+<div class="px-2" >
+   <h2 class="pt-2 pb-1 border-bottom">Group Members</h2>
+<h6 class="pt-1">Syed Muhammad Haris (20B-100-SE)<br/>Syed Muhammad Rimmel Asghar (20B-005-SE)</h6>
+</div>
+
+
+ <div class="container px-2" id="custom-cards">
+   <h2 class="pt-2 pb-1 border-bottom">Features</h2>
+
+    <div class="row row-cols-3 row-cols-lg-3 align-items-stretch g-3 py-4">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('https://i0.wp.com/outboardst.com/wp-content/uploads/2018/12/what-the-hex-dark.png?w=400&ssl=1');">
+          <div class="d-flex flex-column h-100 p-5 pb-6 text-white text-shadow-12">
+            <h2 class="pt-3 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold" >Customers</h2>
+            <a class="nav-link text-light btn btn-primary btn-outline-success mt-2 p-2" asp-area="" asp-controller="Customers" asp-action="Index">Visit Page</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('https://i1.wp.com/feedmekittens.com/wp-content/uploads/2019/09/memphis-mini-dark.png?w=400&ssl=1');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-3 text">
+            <h2 class="pt-3 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold ">News Letters</h2>
+            <a class="nav-link text-light btn btn-primary btn-outline-success mt-2" asp-area="" asp-controller="Customers" asp-action="Index">Visit Page</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('https://i0.wp.com/outboardst.com/wp-content/uploads/2018/12/what-the-hex-dark.png?w=400&ssl=1');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-12">
+            <h2 class="pt-3 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold">Suppliers</h2>
+            <a class="nav-link text-light btn btn-primary btn-outline-success mt-2" asp-area="" asp-controller="Customers" asp-action="Index">Visit Page</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

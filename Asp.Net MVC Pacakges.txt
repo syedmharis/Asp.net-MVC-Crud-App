@@ -1,0 +1,25 @@
+Required Packages:
+Install-Package Microsoft.EntityFrameworkCore.SqlServer  
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.Design
+
+Add DB Model:
+Scaffold-DbContext "Server=SYEDS-PC;Database=Schema17;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Step : 1 (appsetting.json)
+
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnecttion": "Server=SYEDS-PC;Database=Schema17;Trusted_Connection=True;"
+  }
+
+Step : 2
+
+string connection = builder.Configuration.GetConnectionString("DefualtConnection");
+
+builder.Services.AddDbContext<Schema15Context>(options =>
+{
+    options.UseSqlServer(connection);
+});
+
+[DisplayName("Customer ID")]

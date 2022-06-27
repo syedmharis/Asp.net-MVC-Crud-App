@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Schema17.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="fw-bold" >Customers Details</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mt-2">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Custname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shippingaddress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Custname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shippingaddress)
+            </td>
+            <td >
+                <a asp-action="Edit" asp-route-id="@item.CustId" class="btn btn-outline-primary mx-1" pt-4>Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.CustId" class="btn btn-outline-success mx-1">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.CustId" class="btn btn-outline-danger mx-1">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

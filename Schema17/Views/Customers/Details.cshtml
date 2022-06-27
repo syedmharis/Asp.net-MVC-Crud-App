@@ -1,0 +1,30 @@
+﻿@model Schema17.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Customer</h1>
+
+<div>
+    <h4>Personal Details </h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Custname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Custname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Shippingaddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Shippingaddress)
+        </dd>
+    </dl>
+</div>
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.CustId" class="btn btn-outline-danger px-4">Edit</a> 
+    <a asp-action="Index"  class="btn btn-primary px-4">Back to List</a>
+</div>
