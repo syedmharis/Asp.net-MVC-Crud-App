@@ -9,16 +9,17 @@
 <p>
     <a asp-action="Create" class="btn btn-primary mt-2">Add New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
+<table class="table table-bordered table-hover">
+    <caption>List of Customers Registered</caption>
+    <thead class="table-dark">
+        <tr >
             <th>
                 @Html.DisplayNameFor(model => model.Custname)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Shippingaddress)
             </th>
-            <th></th>
+            <th>Funtions</th>
         </tr>
     </thead>
     <tbody>

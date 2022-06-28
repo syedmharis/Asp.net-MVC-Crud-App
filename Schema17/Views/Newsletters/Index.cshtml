@@ -9,8 +9,9 @@
 <p>
     <a asp-action="Create" class="btn btn-primary mt-2">Add New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered table-hover">
+    <caption>List of Newsletter Registered</caption>
+<thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.NewsLetterName)
