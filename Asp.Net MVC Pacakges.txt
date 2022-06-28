@@ -10,7 +10,7 @@ Step : 1 (appsetting.json)
 
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConecttion": "Server=SYEDS-PC;Database=Schema17;Trusted_Connection=True;"
+    "DefaultConnection": "Server=SYEDS-PC;Database=Schema17;Trusted_Connection=True;"
   }
 }
 
